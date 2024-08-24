@@ -1,0 +1,10 @@
+from django.urls import path
+from . import views
+
+urlpatterns = [
+    path('requests/', views.customer_requests, name='customer_requests'),
+    path('requests/new/', views.create_service_request, name='create_service_request'),
+    path('requests/<int:pk>/', views.request_detail, name='request_detail'),
+    path('requests/<int:pk>/update/', views.update_request, name='update_request'),
+    path('support/', views.support_dashboard, name='support_dashboard'),
+]
