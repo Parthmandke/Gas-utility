@@ -1,0 +1,7 @@
+<h2>Your Service Requests</h2>
+<ul>
+    {% for request in service_requests %}
+    <li><a href="{% url 'request_detail' request.pk %}">{{ request.service_type }} - {{ request.status }}</a></li>
+    {% endfor %}
+</ul>
+<a href="{% url 'create_service_request' %}">Create New Request</a>
