@@ -1,0 +1,7 @@
+from django.contrib import admin
+from .models import Customer, ServiceRequest, SupportRepresentative, RequestUpdate
+
+admin.site.register(Customer)
+admin.site.register(ServiceRequest)
+admin.site.register(SupportRepresentative)
+admin.site.register(RequestUpdate)
